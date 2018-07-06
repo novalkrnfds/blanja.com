@@ -1,0 +1,44 @@
+<div>
+  <transition name="modal">
+    <div class="modal-mask">
+      <div class="modal-wrapper">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" @click="closeModal">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">{{film.title}}</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="from-group">
+                    <span class="small text-muted">Director</span>
+                    <h4>{{film.director}}</h4>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="from-group">
+                    <span class="small text-muted">Release Date</span>
+                    <h4>{{film.release_date}}</h4>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="from-group">
+                    <span class="small text-muted">Producer</span>
+                    <h4>{{film.producer}}</h4>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <legend>Sinopsis</legend>
+              <p class="sinopsis" v-html="film.opening_crawl"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>

@@ -1,0 +1,9 @@
+<div>
+  <div class="container-fluid" align="center" v-if="isLoading">
+    <br />
+    <loader color="#4471b0" size="100px"></loader>
+    <br />
+    <h4>Fetching data, please wait..</h4>
+  </div>
+  <people v-else />
+</div>

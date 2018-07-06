@@ -1,0 +1,76 @@
+<div>
+    <div class="container">
+      <header>
+        <h2><span class="title">{{dataPeople.name}}</span></h2>
+      </header>
+  
+      <section class="wrapper">
+        <div class="well dark-panel">
+          <div class="row">
+            <div class="col-md-1">  
+              <div class="well img-box">
+                <img src="../../../static/img/image (2).png" class="img-avatar" alt="avatar">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="detail-name">
+                  <div class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-lg-1 control-label">Height:</label>
+                      <div class="col-lg-6">
+                        <label class="control-label">{{dataPeople.height}}cm</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-1 control-label">Mass:</label>
+                      <div class="col-lg-6">
+                        <label class="control-label">{{dataPeople.hair_color | capitalize}}</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-1 control-label">Hair Color:</label>
+                      <div class="col-lg-6">
+                        <label class="control-label">{{dataPeople.skin_color | capitalize}}</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-1 control-label">Skin Color:</label>
+                      <div class="col-lg-6">
+                        <label class="control-label">{{dataPeople.eye_color | capitalize}}</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-1 control-label">Birth Year:</label>
+                      <div class="col-lg-6">
+                        <label class="control-label">{{dataPeople.birth_year}}</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-1 control-label">Gender:</label>
+                      <div class="col-lg-6">
+                        <label class="control-label">172cm</label>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <button class="btn btn-primary btn-lg pull-right" @click="findMore">Find More People</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="container-fluid" align="center" v-if="isLoading">
+          <br />
+          <loader color="#4471b0" size="20px"></loader>
+          <br />
+          <h4>Fetching movie's, please wait..</h4>
+        </div>
+        <div class="row" v-else>
+          <films />
+          <related-movie />
+        </div>
+      </section>
+      
+    </div>
+</div>

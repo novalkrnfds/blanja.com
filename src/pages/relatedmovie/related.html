@@ -1,0 +1,34 @@
+<div>
+  <div class="col-lg-4 position-right">
+    <h4><span class="txt-danger">Related Another Movie's</span></h4>
+    <div class="panel panel-default another-movie">
+      <div class="panel-heading">
+        <label>{{related.title}}</label>
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-sm-2">Director:</label>
+            <div class="col-sm-5">
+              <label class="control-label">{{related.director}}</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2">Producer:</label>
+            <div class="col-sm-6">
+              <label class="control-label">{{related.producer}}</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2">Release Date:</label>
+            <div class="col-sm-6">
+              <label class="control-label">{{related.release_date}}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <p class="sinopsis" v-html="related.opening_crawl"></p>
+        <a href="#" class="pull-right">See More</a>
+      </div>
+    </div>
+  </div>
+</div>
